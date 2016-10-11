@@ -10,14 +10,6 @@ private static $dbHost = '';
 private static $dbUsername = '';
 private static $dbUserPassword = '';
 ```
-```
-# open database connection 
-$pdo = Database::connect();
-```
-```
-# close database connection
-Database::disconnect();
-```
 # Usage
 
 ```
