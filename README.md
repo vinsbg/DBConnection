@@ -1,7 +1,15 @@
 # DBConnection
 Simple class for database connection
 
-# Usage
+# Instructions
+
+```
+# Place your database credentials
+private static $dbName = '';
+private static $dbHost = '';
+private static $dbUsername = '';
+private static $dbUserPassword = '';
+```
 ```
 # open database connection 
 $pdo = Database::connect();
@@ -10,4 +18,32 @@ $pdo = Database::connect();
 # close database connection
 Database::disconnect();
 ```
+# Usage
 
+```
+include 'dbConnection.inc.php';
+
+// establish connection 
+$pdo = Database::connect(); 
+
+    // selecting from database with prepared statements
+    $value = $pdo->prepare('SELECT * FROM table WHERE id= ?);
+    
+    // binding parameter
+    $value->bindParam(1, $id, PDO::PARAM_INT); 
+    
+    // executing
+    $value->execute();
+    
+    // fetching results
+    $result = $value->fetch();
+
+    if( $result > 0) {
+        // working with results
+    }
+    else {
+        // working without results
+    }
+    
+// closingnnection to database    
+Database::disconnect(); 
