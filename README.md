@@ -2,12 +2,12 @@
 Simple class for database connection
 
 # Usage
-// open database connection 
-
+```
+# open database connection 
 $pdo = Database::connect();
-
-// rest of the code
-
-// close database connection
-
+```
+```
+# close database connection
 Database::disconnect();
+```
+
