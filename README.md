@@ -37,5 +37,5 @@ $pdo = Database::connect();
         // working without results
     }
     
-// closingnnection to database    
+// closing connection to database    
 Database::disconnect(); 
